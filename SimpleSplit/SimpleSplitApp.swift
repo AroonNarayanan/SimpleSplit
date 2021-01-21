@@ -11,7 +11,7 @@ import SwiftUI
 struct SimpleSplitApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ListPeople()
         }
     }
 }

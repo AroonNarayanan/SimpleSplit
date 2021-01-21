@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C08B667125B93C6500AFBA63 /* SimpleSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B667025B93C6500AFBA63 /* SimpleSplitApp.swift */; };
-		C08B667325B93C6500AFBA63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B667225B93C6500AFBA63 /* ContentView.swift */; };
+		C08B667325B93C6500AFBA63 /* ListPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B667225B93C6500AFBA63 /* ListPeople.swift */; };
 		C08B667525B93C6700AFBA63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08B667425B93C6700AFBA63 /* Assets.xcassets */; };
 		C08B667825B93C6700AFBA63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08B667725B93C6700AFBA63 /* Preview Assets.xcassets */; };
 		C08B668325B93C6700AFBA63 /* SimpleSplitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B668225B93C6700AFBA63 /* SimpleSplitTests.swift */; };
 		C08B668E25B93C6700AFBA63 /* SimpleSplitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B668D25B93C6700AFBA63 /* SimpleSplitUITests.swift */; };
+		C08B669F25B9400900AFBA63 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B669E25B9400900AFBA63 /* Models.swift */; };
+		C08B66A725B944DC00AFBA63 /* ListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B66A625B944DC00AFBA63 /* ListItems.swift */; };
+		C08B66AC25B9458300AFBA63 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B66AB25B9458300AFBA63 /* SampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,7 @@
 /* Begin PBXFileReference section */
 		C08B666D25B93C6500AFBA63 /* SimpleSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08B667025B93C6500AFBA63 /* SimpleSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSplitApp.swift; sourceTree = "<group>"; };
-		C08B667225B93C6500AFBA63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C08B667225B93C6500AFBA63 /* ListPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPeople.swift; sourceTree = "<group>"; };
 		C08B667425B93C6700AFBA63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C08B667725B93C6700AFBA63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C08B667925B93C6700AFBA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		C08B668925B93C6700AFBA63 /* SimpleSplitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSplitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08B668D25B93C6700AFBA63 /* SimpleSplitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSplitUITests.swift; sourceTree = "<group>"; };
 		C08B668F25B93C6700AFBA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C08B669E25B9400900AFBA63 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		C08B66A625B944DC00AFBA63 /* ListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItems.swift; sourceTree = "<group>"; };
+		C08B66AB25B9458300AFBA63 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				C08B667025B93C6500AFBA63 /* SimpleSplitApp.swift */,
-				C08B667225B93C6500AFBA63 /* ContentView.swift */,
+				C08B667225B93C6500AFBA63 /* ListPeople.swift */,
 				C08B667425B93C6700AFBA63 /* Assets.xcassets */,
 				C08B667925B93C6700AFBA63 /* Info.plist */,
 				C08B667625B93C6700AFBA63 /* Preview Content */,
+				C08B669E25B9400900AFBA63 /* Models.swift */,
+				C08B66A625B944DC00AFBA63 /* ListItems.swift */,
+				C08B66AB25B9458300AFBA63 /* SampleData.swift */,
 			);
 			path = SimpleSplit;
 			sourceTree = "<group>";
@@ -259,7 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C08B667325B93C6500AFBA63 /* ContentView.swift in Sources */,
+				C08B66A725B944DC00AFBA63 /* ListItems.swift in Sources */,
+				C08B669F25B9400900AFBA63 /* Models.swift in Sources */,
+				C08B667325B93C6500AFBA63 /* ListPeople.swift in Sources */,
+				C08B66AC25B9458300AFBA63 /* SampleData.swift in Sources */,
 				C08B667125B93C6500AFBA63 /* SimpleSplitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
