@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C08B667125B93C6500AFBA63 /* SimpleSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B667025B93C6500AFBA63 /* SimpleSplitApp.swift */; };
+		C08B667325B93C6500AFBA63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B667225B93C6500AFBA63 /* ContentView.swift */; };
+		C08B667525B93C6700AFBA63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08B667425B93C6700AFBA63 /* Assets.xcassets */; };
+		C08B667825B93C6700AFBA63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08B667725B93C6700AFBA63 /* Preview Assets.xcassets */; };
+		C08B668325B93C6700AFBA63 /* SimpleSplitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B668225B93C6700AFBA63 /* SimpleSplitTests.swift */; };
+		C08B668E25B93C6700AFBA63 /* SimpleSplitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B668D25B93C6700AFBA63 /* SimpleSplitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C08B667F25B93C6700AFBA63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C08B666525B93C6500AFBA63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C08B666C25B93C6500AFBA63;
+			remoteInfo = SimpleSplit;
+		};
+		C08B668A25B93C6700AFBA63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C08B666525B93C6500AFBA63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C08B666C25B93C6500AFBA63;
+			remoteInfo = SimpleSplit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C08B666D25B93C6500AFBA63 /* SimpleSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C08B667025B93C6500AFBA63 /* SimpleSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSplitApp.swift; sourceTree = "<group>"; };
+		C08B667225B93C6500AFBA63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C08B667425B93C6700AFBA63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C08B667725B93C6700AFBA63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C08B667925B93C6700AFBA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C08B667E25B93C6700AFBA63 /* SimpleSplitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSplitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C08B668225B93C6700AFBA63 /* SimpleSplitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSplitTests.swift; sourceTree = "<group>"; };
+		C08B668425B93C6700AFBA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C08B668925B93C6700AFBA63 /* SimpleSplitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSplitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C08B668D25B93C6700AFBA63 /* SimpleSplitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSplitUITests.swift; sourceTree = "<group>"; };
+		C08B668F25B93C6700AFBA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C08B666A25B93C6500AFBA63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C08B667B25B93C6700AFBA63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C08B668625B93C6700AFBA63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C08B666425B93C6500AFBA63 = {
+			isa = PBXGroup;
+			children = (
+				C08B666F25B93C6500AFBA63 /* SimpleSplit */,
+				C08B668125B93C6700AFBA63 /* SimpleSplitTests */,
+				C08B668C25B93C6700AFBA63 /* SimpleSplitUITests */,
+				C08B666E25B93C6500AFBA63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C08B666E25B93C6500AFBA63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C08B666D25B93C6500AFBA63 /* SimpleSplit.app */,
+				C08B667E25B93C6700AFBA63 /* SimpleSplitTests.xctest */,
+				C08B668925B93C6700AFBA63 /* SimpleSplitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C08B666F25B93C6500AFBA63 /* SimpleSplit */ = {
+			isa = PBXGroup;
+			children = (
+				C08B667025B93C6500AFBA63 /* SimpleSplitApp.swift */,
+				C08B667225B93C6500AFBA63 /* ContentView.swift */,
+				C08B667425B93C6700AFBA63 /* Assets.xcassets */,
+				C08B667925B93C6700AFBA63 /* Info.plist */,
+				C08B667625B93C6700AFBA63 /* Preview Content */,
+			);
+			path = SimpleSplit;
+			sourceTree = "<group>";
+		};
+		C08B667625B93C6700AFBA63 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C08B667725B93C6700AFBA63 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C08B668125B93C6700AFBA63 /* SimpleSplitTests */ = {
+			isa = PBXGroup;
+			children = (
+				C08B668225B93C6700AFBA63 /* SimpleSplitTests.swift */,
+				C08B668425B93C6700AFBA63 /* Info.plist */,
+			);
+			path = SimpleSplitTests;
+			sourceTree = "<group>";
+		};
+		C08B668C25B93C6700AFBA63 /* SimpleSplitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C08B668D25B93C6700AFBA63 /* SimpleSplitUITests.swift */,
+				C08B668F25B93C6700AFBA63 /* Info.plist */,
+			);
+			path = SimpleSplitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C08B666C25B93C6500AFBA63 /* SimpleSplit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C08B669225B93C6700AFBA63 /* Build configuration list for PBXNativeTarget "SimpleSplit" */;
+			buildPhases = (
+				C08B666925B93C6500AFBA63 /* Sources */,
+				C08B666A25B93C6500AFBA63 /* Frameworks */,
+				C08B666B25B93C6500AFBA63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleSplit;
+			productName = SimpleSplit;
+			productReference = C08B666D25B93C6500AFBA63 /* SimpleSplit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C08B667D25B93C6700AFBA63 /* SimpleSplitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C08B669525B93C6700AFBA63 /* Build configuration list for PBXNativeTarget "SimpleSplitTests" */;
+			buildPhases = (
+				C08B667A25B93C6700AFBA63 /* Sources */,
+				C08B667B25B93C6700AFBA63 /* Frameworks */,
+				C08B667C25B93C6700AFBA63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C08B668025B93C6700AFBA63 /* PBXTargetDependency */,
+			);
+			name = SimpleSplitTests;
+			productName = SimpleSplitTests;
+			productReference = C08B667E25B93C6700AFBA63 /* SimpleSplitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C08B668825B93C6700AFBA63 /* SimpleSplitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C08B669825B93C6700AFBA63 /* Build configuration list for PBXNativeTarget "SimpleSplitUITests" */;
+			buildPhases = (
+				C08B668525B93C6700AFBA63 /* Sources */,
+				C08B668625B93C6700AFBA63 /* Frameworks */,
+				C08B668725B93C6700AFBA63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C08B668B25B93C6700AFBA63 /* PBXTargetDependency */,
+			);
+			name = SimpleSplitUITests;
+			productName = SimpleSplitUITests;
+			productReference = C08B668925B93C6700AFBA63 /* SimpleSplitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C08B666525B93C6500AFBA63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					C08B666C25B93C6500AFBA63 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					C08B667D25B93C6700AFBA63 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = C08B666C25B93C6500AFBA63;
+					};
+					C08B668825B93C6700AFBA63 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = C08B666C25B93C6500AFBA63;
+					};
+				};
+			};
+			buildConfigurationList = C08B666825B93C6500AFBA63 /* Build configuration list for PBXProject "SimpleSplit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C08B666425B93C6500AFBA63;
+			productRefGroup = C08B666E25B93C6500AFBA63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C08B666C25B93C6500AFBA63 /* SimpleSplit */,
+				C08B667D25B93C6700AFBA63 /* SimpleSplitTests */,
+				C08B668825B93C6700AFBA63 /* SimpleSplitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C08B666B25B93C6500AFBA63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C08B667825B93C6700AFBA63 /* Preview Assets.xcassets in Resources */,
+				C08B667525B93C6700AFBA63 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C08B667C25B93C6700AFBA63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C08B668725B93C6700AFBA63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C08B666925B93C6500AFBA63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C08B667325B93C6500AFBA63 /* ContentView.swift in Sources */,
+				C08B667125B93C6500AFBA63 /* SimpleSplitApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C08B667A25B93C6700AFBA63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C08B668325B93C6700AFBA63 /* SimpleSplitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C08B668525B93C6700AFBA63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C08B668E25B93C6700AFBA63 /* SimpleSplitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C08B668025B93C6700AFBA63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C08B666C25B93C6500AFBA63 /* SimpleSplit */;
+			targetProxy = C08B667F25B93C6700AFBA63 /* PBXContainerItemProxy */;
+		};
+		C08B668B25B93C6700AFBA63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C08B666C25B93C6500AFBA63 /* SimpleSplit */;
+			targetProxy = C08B668A25B93C6700AFBA63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C08B669025B93C6700AFBA63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C08B669125B93C6700AFBA63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C08B669325B93C6700AFBA63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SimpleSplit/Preview Content\"";
+				DEVELOPMENT_TEAM = H772T9VEX6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SimpleSplit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aroonnarayanan.SimpleSplit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C08B669425B93C6700AFBA63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SimpleSplit/Preview Content\"";
+				DEVELOPMENT_TEAM = H772T9VEX6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SimpleSplit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aroonnarayanan.SimpleSplit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C08B669625B93C6700AFBA63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H772T9VEX6;
+				INFOPLIST_FILE = SimpleSplitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aroonnarayanan.SimpleSplitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleSplit.app/SimpleSplit";
+			};
+			name = Debug;
+		};
+		C08B669725B93C6700AFBA63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H772T9VEX6;
+				INFOPLIST_FILE = SimpleSplitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aroonnarayanan.SimpleSplitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleSplit.app/SimpleSplit";
+			};
+			name = Release;
+		};
+		C08B669925B93C6700AFBA63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H772T9VEX6;
+				INFOPLIST_FILE = SimpleSplitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aroonnarayanan.SimpleSplitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleSplit;
+			};
+			name = Debug;
+		};
+		C08B669A25B93C6700AFBA63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H772T9VEX6;
+				INFOPLIST_FILE = SimpleSplitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aroonnarayanan.SimpleSplitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleSplit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C08B666825B93C6500AFBA63 /* Build configuration list for PBXProject "SimpleSplit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C08B669025B93C6700AFBA63 /* Debug */,
+				C08B669125B93C6700AFBA63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C08B669225B93C6700AFBA63 /* Build configuration list for PBXNativeTarget "SimpleSplit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C08B669325B93C6700AFBA63 /* Debug */,
+				C08B669425B93C6700AFBA63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C08B669525B93C6700AFBA63 /* Build configuration list for PBXNativeTarget "SimpleSplitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C08B669625B93C6700AFBA63 /* Debug */,
+				C08B669725B93C6700AFBA63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C08B669825B93C6700AFBA63 /* Build configuration list for PBXNativeTarget "SimpleSplitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C08B669925B93C6700AFBA63 /* Debug */,
+				C08B669A25B93C6700AFBA63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C08B666525B93C6500AFBA63 /* Project object */;
+}
