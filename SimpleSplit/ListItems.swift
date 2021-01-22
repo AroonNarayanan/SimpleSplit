@@ -17,7 +17,7 @@ struct ListItems: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Add the items from your receipt!")
+            Text("Add the items from your receipt!").padding()
             List() {
                 ForEach(itemList, id: \.id) {item in
                     ItemRow(item: item)
@@ -38,19 +38,19 @@ struct ListItems: View {
             HStack {
                 Image(systemName: "text.badge.plus").font(.title)
                 Spacer().frame(width: 20)
-                VStack(alignment: .leading) {
+                HStack {
                     HStack {
                         TextField("Item",text: $newItemName)
                         TextField("Price", text: $newItemPrice)
                             .keyboardType(.decimalPad)
                     }
-                    Spacer().frame(height: 15)
-                    Picker(newItemPersonIndex > -1 ? personList[newItemPersonIndex].name : "Choose Person", selection: $newItemPersonIndex) { ForEach( 0 ..< personList.count) {
+                    Spacer().frame(width: 10)
+                    Picker(selection: $newItemPersonIndex, label: Image(systemName: "person.crop.circle.badge.plus")) { ForEach( 0 ..< personList.count) {
                         Text(personList[$0].name)
                     }
                     }.pickerStyle(MenuPickerStyle())
-                    Spacer().frame(height: 15)
-                    Button("Add Item") {
+                    Spacer().frame(width: 15)
+                    Button("Add") {
                         if (newItemName != "" && newItemPrice != "" && newItemPersonIndex > -1) {
                             itemList.append(Item(id: UUID(), name: newItemName, price: Float(newItemPrice) ?? 0, people: [personList[newItemPersonIndex]]))
                             newItemName = ""
@@ -61,10 +61,11 @@ struct ListItems: View {
                     }
                 }
             }
-            .padding(.init(top: 20, leading: 0, bottom: 20, trailing: 0))
+            .padding()
             Divider()
             Subtotal(items: itemList)
-                .padding(.init(top: 20, leading: 0, bottom: 20, trailing: 0))
+                .padding()
+            Spacer().frame(height: 10)
                 .navigationTitle(Text("Step Two"))
                 .toolbar {
                     if (itemList.count > 0) {
@@ -72,7 +73,6 @@ struct ListItems: View {
                     }
                 }
         }
-        .padding()
     }
 }
 

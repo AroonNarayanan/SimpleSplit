@@ -12,7 +12,7 @@ struct SinglePayerSummary: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Here's what everyone owes:")
+            Text("Here's what everyone owes:").padding()
             List() {
                 ForEach(personList, id: \.id) {person in
                     HStack {
@@ -23,11 +23,9 @@ struct SinglePayerSummary: View {
                 }
             }.padding(0)
             .listStyle(InsetGroupedListStyle())
-            Spacer().frame(height: 20)
-            Total(personList: personList)
-            Spacer().frame(height: 20)
+            Total(personList: personList).padding()
+            Spacer().frame(height: 10)
         }
-        .padding()
         .navigationTitle(Text("All Done!"))
     }
 }

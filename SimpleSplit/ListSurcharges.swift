@@ -17,7 +17,7 @@ struct ListSurcharges: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Add tax, tip, or any other surcharges!")
+            Text("Add tax, tip, or any other surcharges!").padding()
             List() {
                 ForEach(surchargeList, id: \.id) {surcharge in
                     HStack {
@@ -42,7 +42,7 @@ struct ListSurcharges: View {
             HStack {
                 Image(systemName: "text.badge.plus").font(.title)
                 Spacer().frame(width: 20)
-                VStack(alignment: .leading){
+                HStack{
                     HStack {
                         TextField("Amount", text: $newSurchargeAmount)
                             .keyboardType(.decimalPad)
@@ -52,8 +52,8 @@ struct ListSurcharges: View {
                         }
                         .pickerStyle(MenuPickerStyle())
                     }
-                    Spacer().frame(height: 15)
-                    Button("Add Surcharge") {
+                    Spacer().frame(width: 15)
+                    Button("Add") {
                         if (newSurchargeAmount != "") {
                             surchargeList.append(Surcharge(id: UUID(), name: newSurchargeType, amount: Float(newSurchargeAmount) ?? 0))
                             newSurchargeAmount = ""
@@ -62,13 +62,14 @@ struct ListSurcharges: View {
                         }
                     }
                 }
-            }.padding(.init(top: 20, leading: 0, bottom: 20, trailing: 0))
+            }.padding()
             Divider()
-            Spacer().frame(height: 20)
-            Subtotal(items: itemList, isTitle: false)
-            Total(items: itemList, surcharges: surchargeList)
-            Spacer().frame(height: 20)
-        }.padding()
+            VStack(alignment: .leading) {
+                Subtotal(items: itemList, isTitle: false)
+                Total(items: itemList, surcharges: surchargeList)
+            }.padding()
+            Spacer().frame(height: 10)
+        }
         .navigationTitle(Text("Step Three"))
         .toolbar {
             NavigationLink("Done", destination: SinglePayerSummary(personList: computeSinglePayerTotals(personList: personList, itemList: itemList, surchargeList: surchargeList)))

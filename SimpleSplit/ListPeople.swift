@@ -14,7 +14,7 @@ struct ListPeople: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                Text("Add everyone who needs to chip in!")
+                Text("Add everyone who needs to chip in!").padding()
                 List() {
                     ForEach(personList, id: \.id) {person in
                         Text(person.name)
@@ -35,18 +35,19 @@ struct ListPeople: View {
                 HStack {
                     Image(systemName: "text.badge.plus").font(.title)
                     Spacer().frame(width: 20)
-                    VStack(alignment: .leading) {
+                    HStack {
                         TextField("Name",text: $newPersonName)
                             .textContentType(.name)
                         Spacer().frame(height: 15)
-                        Button("Add Person") {
+                        Button("Add") {
                             if (newPersonName != "") {
                                 personList.append(Person(id: UUID(), name: newPersonName, amount: 0))
                                 newPersonName = ""
                             }
                         }
                     }
-                }.padding(.init(top: 20, leading: 0, bottom: 20, trailing: 0))
+                }.padding()
+                Spacer().frame(height: 10)
             }
             .navigationTitle(Text("Step One"))
             .toolbar() {
@@ -54,7 +55,6 @@ struct ListPeople: View {
                     NavigationLink("Next", destination: ListItems(personList: personList))
                 }
             }
-            .padding()
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
