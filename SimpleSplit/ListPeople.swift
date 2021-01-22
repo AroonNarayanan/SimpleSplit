@@ -14,7 +14,7 @@ struct ListPeople: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                Text("Add everyone at your table!")
+                Text("Add everyone who needs to chip in!")
                 List() {
                     ForEach(personList, id: \.id) {person in
                         Text(person.name)
@@ -31,16 +31,22 @@ struct ListPeople: View {
                         personList.remove(atOffsets: indexSet)
                     }
                 }.padding(0)
-                .listStyle(PlainListStyle())
-                TextField("Name",text: $newPersonName)
-                    .textContentType(.name)
-                Spacer().frame(height: 15)
-                Button("Add Person") {
-                    if (newPersonName != "") {
-                        personList.append(Person(id: UUID(), name: newPersonName, amount: 0))
-                        newPersonName = ""
+                .listStyle(InsetGroupedListStyle())
+                HStack {
+                    Image(systemName: "text.badge.plus").font(.title)
+                    Spacer().frame(width: 20)
+                    VStack(alignment: .leading) {
+                        TextField("Name",text: $newPersonName)
+                            .textContentType(.name)
+                        Spacer().frame(height: 15)
+                        Button("Add Person") {
+                            if (newPersonName != "") {
+                                personList.append(Person(id: UUID(), name: newPersonName, amount: 0))
+                                newPersonName = ""
+                            }
+                        }
                     }
-                }
+                }.padding(.init(top: 20, leading: 0, bottom: 20, trailing: 0))
             }
             .navigationTitle(Text("Step One"))
             .toolbar() {

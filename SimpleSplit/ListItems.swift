@@ -34,36 +34,43 @@ struct ListItems: View {
                     itemList.remove(atOffsets: indexSet)
                 }
             }
-            .listStyle(PlainListStyle())
-            Subtotal(items: itemList)
-            Divider()
-            Spacer().frame(height: 20)
+            .listStyle(InsetGroupedListStyle())
             HStack {
-                TextField("Item",text: $newItemName)
-                TextField("Price", text: $newItemPrice)
-                    .keyboardType(.decimalPad)
-            }
-            Spacer().frame(height: 15)
-            Picker(newItemPersonIndex > -1 ? personList[newItemPersonIndex].name : "Choose Person", selection: $newItemPersonIndex) { ForEach( 0 ..< personList.count) {
-                Text(personList[$0].name)
-            }
-            }.pickerStyle(MenuPickerStyle())
-            Spacer().frame(height: 15)
-            Button("Add Item") {
-                if (newItemName != "" && newItemPrice != "" && newItemPersonIndex > -1) {
-                    itemList.append(Item(id: UUID(), name: newItemName, price: Float(newItemPrice) ?? 0, people: [personList[newItemPersonIndex]]))
-                    newItemName = ""
-                    newItemPrice = ""
-                    newItemPersonIndex = -1
-                    hideKeyboard()
+                Image(systemName: "text.badge.plus").font(.title)
+                Spacer().frame(width: 20)
+                VStack(alignment: .leading) {
+                    HStack {
+                        TextField("Item",text: $newItemName)
+                        TextField("Price", text: $newItemPrice)
+                            .keyboardType(.decimalPad)
+                    }
+                    Spacer().frame(height: 15)
+                    Picker(newItemPersonIndex > -1 ? personList[newItemPersonIndex].name : "Choose Person", selection: $newItemPersonIndex) { ForEach( 0 ..< personList.count) {
+                        Text(personList[$0].name)
+                    }
+                    }.pickerStyle(MenuPickerStyle())
+                    Spacer().frame(height: 15)
+                    Button("Add Item") {
+                        if (newItemName != "" && newItemPrice != "" && newItemPersonIndex > -1) {
+                            itemList.append(Item(id: UUID(), name: newItemName, price: Float(newItemPrice) ?? 0, people: [personList[newItemPersonIndex]]))
+                            newItemName = ""
+                            newItemPrice = ""
+                            newItemPersonIndex = -1
+                            hideKeyboard()
+                        }
+                    }
                 }
             }
-            .navigationTitle(Text("Step Two"))
-            .toolbar {
-                if (itemList.count > 0) {
-                NavigationLink("Next", destination: ListSurcharges(personList: personList, itemList: itemList))
+            .padding(.init(top: 20, leading: 0, bottom: 20, trailing: 0))
+            Divider()
+            Subtotal(items: itemList)
+                .padding(.init(top: 20, leading: 0, bottom: 20, trailing: 0))
+                .navigationTitle(Text("Step Two"))
+                .toolbar {
+                    if (itemList.count > 0) {
+                        NavigationLink("Next", destination: ListSurcharges(personList: personList, itemList: itemList))
+                    }
                 }
-            }
         }
         .padding()
     }

@@ -22,7 +22,10 @@ struct SinglePayerSummary: View {
                     }
                 }
             }.padding(0)
+            .listStyle(InsetGroupedListStyle())
+            Spacer().frame(height: 20)
             Total(personList: personList)
+            Spacer().frame(height: 20)
         }
         .padding()
         .navigationTitle(Text("All Done!"))

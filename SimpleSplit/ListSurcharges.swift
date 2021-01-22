@@ -38,34 +38,40 @@ struct ListSurcharges: View {
                     surchargeList.remove(atOffsets: indexSet)
                 }
             }
-            Subtotal(items: itemList, isTitle: false)
-            Total(items: itemList, surcharges: surchargeList)
+            .listStyle(InsetGroupedListStyle())
+            HStack {
+                Image(systemName: "text.badge.plus").font(.title)
+                Spacer().frame(width: 20)
+                VStack(alignment: .leading){
+                    HStack {
+                        TextField("Amount", text: $newSurchargeAmount)
+                            .keyboardType(.decimalPad)
+                        Picker(newSurchargeType.rawValue, selection: $newSurchargeType) { ForEach(SurchargeType.allCases) { surchargeType in
+                            Text(surchargeType.rawValue)
+                        }
+                        }
+                        .pickerStyle(MenuPickerStyle())
+                    }
+                    Spacer().frame(height: 15)
+                    Button("Add Surcharge") {
+                        if (newSurchargeAmount != "") {
+                            surchargeList.append(Surcharge(id: UUID(), name: newSurchargeType, amount: Float(newSurchargeAmount) ?? 0))
+                            newSurchargeAmount = ""
+                            newSurchargeType = .tax
+                            hideKeyboard()
+                        }
+                    }
+                }
+            }.padding(.init(top: 20, leading: 0, bottom: 20, trailing: 0))
             Divider()
             Spacer().frame(height: 20)
-            HStack {
-                TextField("Amount", text: $newSurchargeAmount)
-                    .keyboardType(.decimalPad)
-                Picker(newSurchargeType.rawValue, selection: $newSurchargeType) { ForEach(SurchargeType.allCases) { surchargeType in
-                    Text(surchargeType.rawValue)
-                }
-                }
-                .pickerStyle(MenuPickerStyle())
-            }
-            Spacer().frame(height: 15)
-            Button("Add Surcharge") {
-                if (newSurchargeAmount != "") {
-                    surchargeList.append(Surcharge(id: UUID(), name: newSurchargeType, amount: Float(newSurchargeAmount) ?? 0))
-                    newSurchargeAmount = ""
-                    newSurchargeType = .tax
-                    hideKeyboard()
-                }
-            }
+            Subtotal(items: itemList, isTitle: false)
+            Total(items: itemList, surcharges: surchargeList)
+            Spacer().frame(height: 20)
         }.padding()
         .navigationTitle(Text("Step Three"))
         .toolbar {
-            if (surchargeList.count > 0) {
             NavigationLink("Done", destination: SinglePayerSummary(personList: computeSinglePayerTotals(personList: personList, itemList: itemList, surchargeList: surchargeList)))
-            }
         }
     }
 }
