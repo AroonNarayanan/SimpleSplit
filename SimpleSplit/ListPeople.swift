@@ -44,7 +44,7 @@ struct ListPeople: View {
                                 personList.append(Person(id: UUID(), name: newPersonName, amount: 0))
                                 newPersonName = ""
                             }
-                        }
+                        }.disabled(newPersonName == "")
                     }
                 }.padding()
                 Spacer().frame(height: 10)

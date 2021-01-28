@@ -51,3 +51,35 @@ func computeTotal(surcharges: [Surcharge]) -> Float {
     }
     return total
 }
+
+func formatPrice(amount: Float) -> String {
+    return String(format: "$%.02f", amount)
+}
+
+func formatPriceWithoutCurrencySign(amount: Float) -> String {
+    return String(format: "%.02f", amount)
+}
+
+func sharableStringFromPersonList(personList: [Person]) -> String {
+    var sharableString = "Here's what everybody owes:\n"
+    personList.forEach { person in
+        sharableString.append("\(person.name): $\(person.amount)\n")
+    }
+    return sharableString
+}
+
+func isValidCurrencyString(currencyString: String) -> Bool {
+    let subStrings = currencyString.split(separator: ".")
+    let numericPredicate = NSPredicate(format: "SELF MATCHES %@", "^[0-9]*$")
+    
+    switch subStrings.count {
+    case 0:
+        return true
+    case 1:
+        return numericPredicate.evaluate(with: subStrings[0])
+    case 2:
+        return numericPredicate.evaluate(with: subStrings[0]) && numericPredicate.evaluate(with: subStrings[1])
+    default:
+        return false
+    }
+}

@@ -25,5 +25,5 @@ func Total(personList: [Person]) -> some View {
 }
 
 func Price(amount: Float) -> some View {
-    return Text(String(format: "$%.02f", amount))
+    return Text(formatPrice(amount: amount))
 }

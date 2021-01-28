@@ -16,6 +16,16 @@ struct ListItems: View {
     @State var newItemPersonIndex = -1
     
     var body: some View {
+        let canAddItem = newItemName != "" && newItemPrice != "" && newItemPersonIndex > -1
+        let personPickerLabel = newItemPersonIndex > -1 ? Image(systemName:  "person.crop.circle.badge.checkmark").foregroundColor(.green) : Image(systemName: "person.crop.circle.badge.plus").foregroundColor(.blue)
+        
+        let newItemPriceProxy = Binding<String>(
+            get: { newItemPrice },
+            set: {
+                newItemPrice = $0
+            }
+        )
+        
         VStack(alignment: .leading) {
             Text("Add the items from your receipt!").padding()
             List() {
@@ -41,24 +51,24 @@ struct ListItems: View {
                 HStack {
                     HStack {
                         TextField("Item",text: $newItemName)
-                        TextField("Price", text: $newItemPrice)
+                        TextField("Price", text: newItemPriceProxy)
                             .keyboardType(.decimalPad)
                     }
                     Spacer().frame(width: 10)
-                    Picker(selection: $newItemPersonIndex, label: Image(systemName: "person.crop.circle.badge.plus")) { ForEach( 0 ..< personList.count) {
+                    Picker(selection: $newItemPersonIndex, label: personPickerLabel) { ForEach( 0 ..< personList.count) {
                         Text(personList[$0].name)
                     }
                     }.pickerStyle(MenuPickerStyle())
                     Spacer().frame(width: 15)
                     Button("Add") {
-                        if (newItemName != "" && newItemPrice != "" && newItemPersonIndex > -1) {
+                        if (canAddItem) {
                             itemList.append(Item(id: UUID(), name: newItemName, price: Float(newItemPrice) ?? 0, people: [personList[newItemPersonIndex]]))
                             newItemName = ""
                             newItemPrice = ""
                             newItemPersonIndex = -1
                             hideKeyboard()
                         }
-                    }
+                    }.disabled(!canAddItem)
                 }
             }
             .padding()

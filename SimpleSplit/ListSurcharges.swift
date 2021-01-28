@@ -60,7 +60,7 @@ struct ListSurcharges: View {
                             newSurchargeType = .tax
                             hideKeyboard()
                         }
-                    }
+                    }.disabled(newSurchargeAmount == "")
                 }
             }.padding()
             Divider()

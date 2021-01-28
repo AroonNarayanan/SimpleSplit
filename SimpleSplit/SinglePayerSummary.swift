@@ -27,6 +27,15 @@ struct SinglePayerSummary: View {
             Spacer().frame(height: 10)
         }
         .navigationTitle(Text("All Done!"))
+        .toolbar {
+            Button(action: {
+                let sharableString = sharableStringFromPersonList(personList: personList)
+                let shareSheet = UIActivityViewController(activityItems: [sharableString], applicationActivities: nil)
+                UIApplication.shared.windows.first?.rootViewController?.present(shareSheet, animated: true, completion: nil)
+            }) {
+                Image(systemName: "square.and.arrow.up")
+            }
+        }
     }
 }
 
