@@ -23,6 +23,7 @@ struct PeoplePicker: View {
             Text(formatPrice(amount: item.price))
             Spacer().frame(height: 10)
             Button("Select All") {
+                item.people.removeAll()
                 item.people.append(contentsOf: personList)
             }
             Spacer().frame(height: 15)

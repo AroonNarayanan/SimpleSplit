@@ -35,6 +35,10 @@ struct ListItems: View {
                 ForEach(itemList, id: \.id) {item in
                     ItemRow(item: item)
                         .contextMenu {
+                            ForEach(item.people, id: \.id) {person in
+                                Label(person.name, systemImage: "person.fill")
+                            }
+                            Divider()
                             Button(action: {
                                 itemList.removeAll(where: {$0.id == item.id})
                             }) {
