@@ -14,10 +14,13 @@ struct ListItems: View {
     @State var newItemName = ""
     @State var newItemPrice = ""
     @State var newItemPersonIndex = -1
+    @State var newItem: Item = Item(id: UUID(), name: "", price: 0, people: [])
+    
+    @State var showPeoplePicker = false
+    @State var didClickDone = false
     
     var body: some View {
-        let canAddItem = newItemName != "" && newItemPrice != "" && newItemPersonIndex > -1
-        let personPickerLabel = newItemPersonIndex > -1 ? Image(systemName:  "person.crop.circle.badge.checkmark").foregroundColor(.green) : Image(systemName: "person.crop.circle.badge.plus").foregroundColor(.blue)
+        let canAddItem = newItem.name != "" && newItemPrice != ""
         
         let newItemPriceProxy = Binding<String>(
             get: { newItemPrice },
@@ -50,23 +53,16 @@ struct ListItems: View {
                 Spacer().frame(width: 20)
                 HStack {
                     HStack {
-                        TextField("Item",text: $newItemName)
+                        TextField("Item",text: $newItem.name)
                         TextField("Price", text: newItemPriceProxy)
                             .keyboardType(.decimalPad)
                     }
-                    Spacer().frame(width: 10)
-                    Picker(selection: $newItemPersonIndex, label: personPickerLabel) { ForEach( 0 ..< personList.count) {
-                        Text(personList[$0].name)
-                    }
-                    }.pickerStyle(MenuPickerStyle())
                     Spacer().frame(width: 15)
                     Button("Add") {
                         if (canAddItem) {
-                            itemList.append(Item(id: UUID(), name: newItemName, price: Float(newItemPrice) ?? 0, people: [personList[newItemPersonIndex]]))
-                            newItemName = ""
-                            newItemPrice = ""
-                            newItemPersonIndex = -1
+                            newItem.price = Float(newItemPrice) ?? 0
                             hideKeyboard()
+                            showPeoplePicker.toggle()
                         }
                     }.disabled(!canAddItem)
                 }
@@ -82,7 +78,16 @@ struct ListItems: View {
                         NavigationLink("Next", destination: ListSurcharges(personList: personList, itemList: itemList))
                     }
                 }
-        }
+        }.sheet(isPresented: $showPeoplePicker, content: {
+            PeoplePicker(item: $newItem, didClickDone: $didClickDone, showingPeoplePicker: $showPeoplePicker, personList: personList).onDisappear() {
+                if (didClickDone) {
+                    itemList.append(newItem)
+                    newItemPrice = ""
+                    newItem = Item(id: UUID(), name: "", price: 0, people: [])
+                    didClickDone = false
+                }
+            }
+        })
     }
 }
 

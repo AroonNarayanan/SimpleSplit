@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C046B3AB25C399430083A058 /* PeoplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C046B3AA25C399430083A058 /* PeoplePicker.swift */; };
 		C08B667125B93C6500AFBA63 /* SimpleSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B667025B93C6500AFBA63 /* SimpleSplitApp.swift */; };
 		C08B667325B93C6500AFBA63 /* ListPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B667225B93C6500AFBA63 /* ListPeople.swift */; };
 		C08B667525B93C6700AFBA63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08B667425B93C6700AFBA63 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C046B3AA25C399430083A058 /* PeoplePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePicker.swift; sourceTree = "<group>"; };
 		C08B666D25B93C6500AFBA63 /* SimpleSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08B667025B93C6500AFBA63 /* SimpleSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSplitApp.swift; sourceTree = "<group>"; };
 		C08B667225B93C6500AFBA63 /* ListPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPeople.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				C0A1FD8525BA3AE8003EF424 /* SmallViews.swift */,
 				C0A1FD8D25BA4925003EF424 /* Utils.swift */,
 				C0A1FD9225BA70FB003EF424 /* SinglePayerSummary.swift */,
+				C046B3AA25C399430083A058 /* PeoplePicker.swift */,
 			);
 			path = SimpleSplit;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				C0A1FD8125BA2745003EF424 /* ListSurcharges.swift in Sources */,
 				C08B66AC25B9458300AFBA63 /* SampleData.swift in Sources */,
 				C0A1FD9325BA70FB003EF424 /* SinglePayerSummary.swift in Sources */,
+				C046B3AB25C399430083A058 /* PeoplePicker.swift in Sources */,
 				C08B667125B93C6500AFBA63 /* SimpleSplitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +457,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SimpleSplit/SimpleSplit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleSplit/Preview Content\"";
 				DEVELOPMENT_TEAM = H772T9VEX6;
 				ENABLE_PREVIEWS = YES;
@@ -462,6 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aroonnarayanan.SimpleSplit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -478,6 +484,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SimpleSplit/SimpleSplit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleSplit/Preview Content\"";
 				DEVELOPMENT_TEAM = H772T9VEX6;
 				ENABLE_PREVIEWS = YES;
@@ -487,6 +494,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aroonnarayanan.SimpleSplit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;

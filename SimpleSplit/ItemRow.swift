@@ -14,7 +14,8 @@ struct ItemRow: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(item.name)
-                Text(item.people[0].name)
+                item.people.count > 1 ? Text("\(item.people.count) people")
+                    .font(.caption) : Text(item.people[0].name)
                     .font(.caption)
             }
             Spacer()
@@ -26,5 +27,6 @@ struct ItemRow: View {
 struct ItemRow_Previews: PreviewProvider {
     static var previews: some View {
         ItemRow(item: sampleItemOnePerson)
+        ItemRow(item: sampleItemManyPeople)
     }
 }
