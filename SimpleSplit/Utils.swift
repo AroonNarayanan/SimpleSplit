@@ -56,7 +56,7 @@ func computeTotal(_ itemList: [Item]) -> Float {
 func computeTotal(_ personList: [Person]) -> Float {
     var total: Float = 0
     personList.forEach {
-        total += $0.amount
+        total += $0.amount.currencyRound
     }
     return total
 }
@@ -91,6 +91,22 @@ func isValidCurrencyString(currencyString: String) -> Bool {
     default:
         return false
     }
+}
+
+func launchVenmo(_ person: Person) {
+    if let url = URL(string: "venmo://paycharge?txn=pay&amount=\(person.amount.currencyRound)") {
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
+}
+
+func hasVenmo(_ person: Person) -> Bool {
+    if let url = URL(string: "venmo://") {
+        let hasVenmo = UIApplication.shared.canOpenURL(url)
+        return hasVenmo
+    }
+    return false
 }
 
 extension Float {

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SinglePayerSummary: View {
+    @State var showTotalHelpModal = false
+    
     var personList: [Person]
     
     var body: some View {
@@ -19,11 +21,22 @@ struct SinglePayerSummary: View {
                         Text(person.name)
                         Spacer()
                         Price(for: person.amount)
+                        if (hasVenmo(person)) {
+                            venmoButton(person)
+                        }
                     }
                 }
             }.padding(0)
             .listStyle(InsetGroupedListStyle())
-            Total(personList: personList).padding()
+            HStack {
+                Total(personList: personList)
+                Spacer().frame(width:15)
+                Button(action: {
+                    showTotalHelpModal = true
+                }) {
+                    Image(systemName: "questionmark.circle")
+                }
+            }.padding()
             Spacer().frame(height: 10)
         }
         .navigationTitle(Text("All Done!"))
@@ -34,6 +47,19 @@ struct SinglePayerSummary: View {
                 UIApplication.shared.windows.first?.rootViewController?.present(shareSheet, animated: true, completion: nil)
             }) {
                 Image(systemName: "square.and.arrow.up")
+            }
+        }.alert(isPresented: $showTotalHelpModal, content: {
+            Alert(title: Text("Understanding Your Total"), message: Text("When we split the total, we round each person's share to the nearest cent. The total you see on this page the sum of those shares."), dismissButton: .default(Text("Close")))
+        })
+    }
+    
+    func venmoButton(_ person: Person) -> some View {
+        return HStack {
+            Spacer().frame(width: 15)
+            Button(action: {
+                launchVenmo(person)
+            }) {
+                Image(systemName: "dollarsign.circle")
             }
         }
     }
