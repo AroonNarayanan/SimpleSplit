@@ -11,19 +11,19 @@ import SwiftUI
 func Subtotal(items: [Item], isTitle: Bool = true) -> some View {
     let font: Font = isTitle ? .title : .body
     return Text(String(format: "Subtotal: $%.02f",
-                       computeTotal(itemList: items))).font(font)
+                       computeTotal(items))).font(font)
 }
 
 func Total(items: [Item], surcharges: [Surcharge]) -> some View {
     return Text(String(format: "Total: $%.02f",
-                       computeTotal(itemList: items) + computeTotal(surcharges: surcharges))).font(.title)
+                       computeTotal(items) + computeTotal(surcharges))).font(.title)
 }
 
 func Total(personList: [Person]) -> some View {
     return Text(String(format: "Total: $%.02f",
-                       computeTotal(personList: personList))).font(.title)
+                       computeTotal(personList))).font(.title)
 }
 
-func Price(amount: Float) -> some View {
-    return Text(formatPrice(amount: amount))
+func Price(for amount: Float) -> some View {
+    Text(amount.priceString)
 }

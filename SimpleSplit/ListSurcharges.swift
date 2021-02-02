@@ -23,7 +23,7 @@ struct ListSurcharges: View {
                     HStack {
                         Text(surcharge.name.rawValue)
                         Spacer()
-                        Price(amount: surcharge.amount)
+                        Price(for: surcharge.amount)
                     }
                     .contextMenu {
                         Button(action: {
@@ -55,7 +55,7 @@ struct ListSurcharges: View {
                     Spacer().frame(width: 15)
                     Button("Add") {
                         if (newSurchargeAmount != "") {
-                            surchargeList.append(Surcharge(id: UUID(), name: newSurchargeType, amount: Float(newSurchargeAmount) ?? 0))
+                            surchargeList.append(Surcharge(id: UUID(), name: newSurchargeType, amount: (Float(newSurchargeAmount) ?? 0).currencyRound))
                             newSurchargeAmount = ""
                             newSurchargeType = .tax
                             hideKeyboard()
@@ -72,7 +72,7 @@ struct ListSurcharges: View {
         }
         .navigationTitle(Text("Step Three"))
         .toolbar {
-            NavigationLink("Done", destination: SinglePayerSummary(personList: computeSinglePayerTotals(personList: personList, itemList: itemList, surchargeList: surchargeList)))
+            NavigationLink("Done", destination: SinglePayerSummary(personList: computeSinglePayerTotalsProportional(personList: personList, itemList: itemList, surchargeList: surchargeList)))
         }
     }
 }

@@ -20,7 +20,7 @@ struct PeoplePicker: View {
             Text("Select anyone you want to contribute to this item:")
             Spacer().frame(height: 10)
             Text(item.name).font(.title)
-            Text(formatPrice(amount: item.price))
+            Text(item.price.priceString)
             Spacer().frame(height: 10)
             Button("Select All") {
                 item.people.removeAll()

@@ -19,7 +19,7 @@ struct ItemRow: View {
                     .font(.caption)
             }
             Spacer()
-            Price(amount: item.price)
+            Price(for: item.price)
         }
     }
 }

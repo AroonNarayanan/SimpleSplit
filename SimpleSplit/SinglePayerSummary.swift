@@ -18,7 +18,7 @@ struct SinglePayerSummary: View {
                     HStack {
                         Text(person.name)
                         Spacer()
-                        Price(amount: person.amount)
+                        Price(for: person.amount)
                     }
                 }
             }.padding(0)

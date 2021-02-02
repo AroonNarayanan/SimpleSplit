@@ -64,7 +64,7 @@ struct ListItems: View {
                     Spacer().frame(width: 15)
                     Button("Add") {
                         if (canAddItem) {
-                            newItem.price = Float(newItemPrice) ?? 0
+                            newItem.price = (Float(newItemPrice) ?? 0).currencyRound
                             hideKeyboard()
                             showPeoplePicker.toggle()
                         }
