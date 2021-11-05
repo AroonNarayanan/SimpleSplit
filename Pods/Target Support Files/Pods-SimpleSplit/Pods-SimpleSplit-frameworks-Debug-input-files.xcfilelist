@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-SimpleSplit/Pods-SimpleSplit-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CMDQueryStringSerialization/CMDQueryStringSerialization.framework
+${BUILT_PRODUCTS_DIR}/SSKeychain/SSKeychain.framework
+${BUILT_PRODUCTS_DIR}/VENCore/VENCore.framework
+${BUILT_PRODUCTS_DIR}/Venmo-iOS-SDK/Venmo_iOS_SDK.framework
